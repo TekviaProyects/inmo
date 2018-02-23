@@ -1606,6 +1606,7 @@
 	<!-- System -->
 		<script src="js_system/estates.js"></script>
 		
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsZOvqzL9c7_O7Fj7t3FDt77nejjwbZXw&libraries=places,geometry" async defer></script>
 		<script>
 			estates.list_estates({
 				div: 'div_estates',

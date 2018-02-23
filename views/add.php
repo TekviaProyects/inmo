@@ -16,7 +16,7 @@
 				<div class="row">
 					<div class="col-sm-12 col-md-6">
 						<label>Numero de baños</label>
-						<input class="form-control" type="number" id="num_bathroom" required="1" />
+						<input class="form-control" type="number" id="num_bathroom" required="1" step=".5" />
 					</div>
 					<div class="col-sm-12 col-md-6">
 						<label>Niveles</label>
@@ -30,27 +30,48 @@
 					</div>
 					<div class="col-sm-12 col-md-6">
 						<label>Superficie en m<sup>2</sup></label>
-						<input class="form-control" type="number" id="surface" required="1" />
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-12 col-md-6">
-						<label>Precio</label>
-						<input class="form-control" type="number" id="price" required="1" />
-					</div>
-					<div class="col-sm-12 col-md-6">
-						<label>Dirección</label>
-						<input class="form-control" type="text" id="address" required="1" />
+						<input class="form-control" type="number" id="surface" required="1" step=".01" />
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-sm-12 col-md-6">
 						<label>Construcción en m<sup>2</sup></label>
-						<input class="form-control" type="number" id="construction" required="1" />
+						<input class="form-control" type="number" id="construction" required="1" step=".01" />
 					</div>
 					<div class="col-sm-12 col-md-6">
 						<label>Descripción</label>
 						<textarea id="description" class="form-control" required="1"></textarea>
+					</div>
+				</div>
+				<div class="row" style="display: none">
+					<div class="col-sm-12">
+						<input class="form-control" type="text" id="lat" required="1" />
+						<input class="form-control" type="text" id="lng" required="1" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 col-md-6">
+						<label>Tipo</label><br />
+						<select id="type" class="custom-select">
+							<option value="1">Renta</option>
+							<option value="2">Venta</option>
+							<option value="3">Fideicomiso</option>
+						</select>
+					</div>
+				</div><br />
+				<div class="row">
+					<div class="col-sm-12 col-md-6">
+						<label>Precio</label>
+						<input class="form-control" type="number" id="price" required="1" step=".01" />
+					</div>
+					<div class="col-sm-12 col-md-6">
+						<label>Dirección</label>
+						<input class="form-control" type="text" id="address" required="1" placeholder="Buscar dirección" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<div id="google_map" style="width: 100%; height: 40vh"> </div>
 					</div>
 				</div>
 				<div class="row">
@@ -72,6 +93,86 @@
 	</div>
 </div>
 <script>
+	function init(){
+		var myLatlng = {
+			lat : 20.6739383,
+			lng : -103.405454
+		};
+		
+		var map = new google.maps.Map(document.getElementById('google_map'), {
+			zoom : 15,
+			center : myLatlng
+		});
+		
+	// Imput para busqueda en google maps
+		var input = document.getElementById('address');
+		var searchBox = new google.maps.places.SearchBox(input, {
+			region: 'MX'
+		});
+		
+	// Bias the SearchBox results towards current map's viewport.
+		map.addListener('bounds_changed', function() {
+			searchBox.setBounds(map.getBounds());
+		});
+		
+		var markers = [];
+		// Listen for the event fired when the user selects a prediction and retrieve
+		// more details for that place.
+		searchBox.addListener('places_changed', function() {
+			var places = searchBox.getPlaces();
+			
+			if (places.length == 0) {
+				return;
+			}
+			
+			// Clear out the old markers.
+			markers.forEach(function(marker) {
+				marker.setMap(null);
+			});
+			markers = [];
+			
+			// For each place, get the icon, name and location.
+			var bounds = new google.maps.LatLngBounds();
+			places.forEach(function(place) {
+				if (!place.geometry) {
+					console.log("Returned place contains no geometry");
+					return;
+				}
+				
+				console.log("=========> lat", place.geometry.location.lat());
+				console.log("=========> lng", place.geometry.location.lng());
+				
+				$("#lat").val(place.geometry.location.lat());
+				$("#lng").val(place.geometry.location.lng());
+				
+				var icon = {
+					url: place.icon,
+					size: new google.maps.Size(71, 71),
+					origin: new google.maps.Point(0, 0),
+					anchor: new google.maps.Point(17, 34),
+					scaledSize: new google.maps.Size(25, 25)
+				};
+				
+				// Create a marker for each place.
+				markers.push(new google.maps.Marker({
+					map: map,
+					icon: icon,
+					title: place.name,
+					position: place.geometry.location
+				}));
+				
+				if (place.geometry.viewport) {
+					// Only geocodes have viewport.
+					bounds.union(place.geometry.viewport);
+				} else {
+					bounds.extend(place.geometry.location);
+				}
+			});
+			map.fitBounds(bounds);
+		});
+	}
+
+
 	function validate(){
 		var data = {},
 			$required = [],
@@ -127,6 +228,9 @@
 		formData.append("title", data.title);
 		formData.append("price", data.price);
 		formData.append("address", data.address);
+		formData.append("lat", data.lat);
+		formData.append("lng", data.lng);
+		formData.append("type", $("#type").val());
 		
 		console.log('==========> DATA', data);
 		
@@ -172,4 +276,6 @@
 			});
 		});
 	}
+	
+	init();
 </script>

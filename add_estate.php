@@ -15,10 +15,11 @@
 	
 	$sql = "INSERT INTO
 				inmuebles(title, num_room, num_bathroom, levels, parking, surface, construction, description, image, pdf, price,
-					address)
+					address, type, lat, lng)
 			VALUES('".$_POST['title']."', '".$_POST['num_room']."', '".$_POST['num_bathroom']."', '".$_POST['levels']."', 
 			'".$_POST['parking']."', '".$_POST['surface']."', '".$_POST['construction']."', '".$_POST['description']."', 
-			'".$image."', '".$pdf."', '".$_POST['price']."', '".$_POST['address']."')";
+			'".$image."', '".$pdf."', '".$_POST['price']."', '".$_POST['address']."', '".$_POST['type']."', '".$_POST['lat']."', 
+			'".$_POST['lng']."')";
 	$resp = mysqli_query($conexion, $sql);
 	
 	if (!$resp) {
