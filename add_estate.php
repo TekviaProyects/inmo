@@ -14,10 +14,11 @@
 		new mysqli("localhost", "tc000457_inmo", "PEla06rapo", "tc000457_inmo");
 	
 	$sql = "INSERT INTO
-				inmuebles(title, num_room, num_bathroom, levels, parking, surface, construction, description, image, pdf)
+				inmuebles(title, num_room, num_bathroom, levels, parking, surface, construction, description, image, pdf, price,
+					address)
 			VALUES('".$_POST['title']."', '".$_POST['num_room']."', '".$_POST['num_bathroom']."', '".$_POST['levels']."', 
 			'".$_POST['parking']."', '".$_POST['surface']."', '".$_POST['construction']."', '".$_POST['description']."', 
-			'".$image."', '".$pdf."')";
+			'".$image."', '".$pdf."', '".$_POST['price']."', '".$_POST['address']."')";
 	$resp = mysqli_query($conexion, $sql);
 	
 	if (!$resp) {

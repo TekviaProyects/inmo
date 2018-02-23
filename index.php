@@ -1605,5 +1605,13 @@
 		
 	<!-- System -->
 		<script src="js_system/estates.js"></script>
+		
+		<script>
+			estates.list_estates({
+				div: 'div_estates',
+				limit: 9,
+				order: ' id DESC'
+			})
+		</script>
 	</body>
 </html>

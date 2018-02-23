@@ -35,6 +35,16 @@
 				</div>
 				<div class="row">
 					<div class="col-sm-12 col-md-6">
+						<label>Precio</label>
+						<input class="form-control" type="number" id="price" required="1" />
+					</div>
+					<div class="col-sm-12 col-md-6">
+						<label>Dirección</label>
+						<input class="form-control" type="text" id="address" required="1" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 col-md-6">
 						<label>Construcción en m<sup>2</sup></label>
 						<input class="form-control" type="number" id="construction" required="1" />
 					</div>
@@ -115,6 +125,8 @@
 		formData.append("parking", data.parking);
 		formData.append("surface", data.surface);
 		formData.append("title", data.title);
+		formData.append("price", data.price);
+		formData.append("address", data.address);
 		
 		console.log('==========> DATA', data);
 		
@@ -145,10 +157,12 @@
 			});
 			
 			$("#btnSubir").prop('disabled', false);
+			$("#btnSubir").html('Guardar');
 		}).fail(function(resp) {
 			console.log('==========> fail !!! save', resp);
 			
 			$("#btnSubir").prop('disabled', false);
+			$("#btnSubir").html('Guardar');
 			swal({
 				title : 'Error',
 				text : 'A ocurrido un problema al guardar los datos',
