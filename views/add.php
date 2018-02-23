@@ -120,7 +120,8 @@
 		
 		console.log('==========> formData', formData);
 		
-		// $("#btnSubir").prop('disabled', true);
+		$("#btnSubir").prop('disabled', true);
+		$("#btnSubir").html('Cargando...');
 		
 		$.ajax({
 			type : "POST",
@@ -143,7 +144,7 @@
 				type : 'success'
 			});
 			
-			// location.reload();
+			$("#btnSubir").prop('disabled', false);
 		}).fail(function(resp) {
 			console.log('==========> fail !!! save', resp);
 			
