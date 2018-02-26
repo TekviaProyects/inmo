@@ -106,7 +106,7 @@
 									<nav id="primary-menu">
 										<ul class="main-menu text-center">
 											<li>
-												<a href="index.html">Home</a>
+												<a href="index.php">Home</a>
 												<ul class="drop-menu">
 													<li>
 														<a href="index.html">Home-1</a>
@@ -622,9 +622,9 @@
 						<div class="row">
 							<div class="col-md-12">
 								<div class="section-title-2 text-center">
-									<h2>Featured PROPERTY</h2>
+									<h2>Casas y terrenos</h2>
 									<p>
-										Sheltek is the best theme for  elit, sed do eiusmod tempor dolor sit amet, conse ctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et lorna aliquatd minim veniam, quis nostrud
+										Encuentra las mejores casas y terrenos, no busques mas. Aqui las tenemos
 									</p>
 								</div>
 							</div>

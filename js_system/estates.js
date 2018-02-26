@@ -55,8 +55,35 @@ var estates = {
 			
 			alert('A ocurrido un error al cargar los datos');
 		});
-	}
+	},
 	
 ///////////////// ******** ----						END list_estates				------ ************ //////////////////
+
+///////////////// ******** ----						details							------ ************ //////////////////
+//////// Load a details view
+	// The parameters that can receive are:
+		
+		
+	details : function($objet){
+		"use strict";
+		console.log('==========> $objet details', $objet);
+		
+		$.ajax({
+			data : $objet,
+			url : 'views/details.php',
+			type : 'post',
+			dataType : 'html'
+		}).done(function(resp) {
+			console.log('==========> done details', resp);
+			
+			$("#"+$objet.div).html(resp);
+		}).fail(function(resp) {
+			console.log('==========> fail !!! details', resp);
+			
+			alert('A ocurrido un error al cargar los datos');
+		});
+	}
+	
+///////////////// ******** ----						END details						------ ************ //////////////////
 
 };

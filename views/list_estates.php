@@ -33,7 +33,8 @@
 	
 	$conexion->close();
 	
-	foreach ($rows as $key => $value) { 
+	foreach ($rows as $key => $value) {
+		$value['div'] = 'div_estates'; 
 		$data = json_encode($value);
 		$data = str_replace('"', "'", $data); ?>
 		
@@ -47,7 +48,7 @@
 							onerror="this.onerror=null;this.src='images/error.jpg';">
 					</a>
 					<div class="flat-link">
-						<a onclick="estates.details(<?php echo $data ?>)" href="#">Mas detalles</a>
+						<a onclick="estates.details(<?php echo $data ?>)" href="#div_estates">Mas detalles</a>
 					</div>
 					<ul class="flat-desc">
 						<li>
