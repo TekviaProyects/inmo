@@ -53,7 +53,7 @@
 						<div class="row">
 							<div class="col-md-3 col-sm-6 col-xs-12">
 								<div class="logo">
-									<a href="index.html"> <img src="images/logo/logo.png" alt=""> </a>
+									<a href="index.php"> <img src="images/logo/logo.png" alt=""> </a>
 								</div>
 							</div>
 							<div class="col-md-6 hidden-sm hidden-xs">
@@ -101,7 +101,7 @@
 							<div class="row">
 								<div class="col-md-12">
 									<div class="sticky-logo">
-										<a href="index.html"> <img src="images/logo/logo.png" alt=""> </a>
+										<a href="index.php"> <img src="images/logo/logo.png" alt=""> </a>
 									</div>
 									<nav id="primary-menu">
 										<ul class="main-menu text-center">
@@ -109,7 +109,7 @@
 												<a href="index.php">Home</a>
 												<ul class="drop-menu">
 													<li>
-														<a href="index.html">Home-1</a>
+														<a href="index.php">Home-1</a>
 													</li>
 													<li>
 														<a href="index-2.html">home-2</a>
@@ -264,10 +264,10 @@
 								<nav id="dropdown">
 									<ul>
 										<li>
-											<a href="index.html">Home</a>
+											<a href="index.php">Home</a>
 											<ul>
 												<li>
-													<a href="index.html">Home-1</a>
+													<a href="index.php">Home-1</a>
 												</li>
 												<li>
 													<a href="index-2.html">home-2</a>
@@ -394,18 +394,18 @@
 			<div class="slider-1 pos-relative slider-overlay">
 				<div class="bend niceties preview-1">
 					<div id="ensign-nivoslider-3" class="slides">
-						<img src="images/slider/1.jpg" alt="" title="#slider-direction-1"  />
-						<img src="images/slider/2.jpg" alt="" title="#slider-direction-2"  />
-						<img src="images/slider/1.jpg" alt="" title="#slider-direction-3"  />
+						<img src="images/portada.png" style="max-height: 880px" alt="" title="#slider-direction-1"  />
+						<img src="images/portada.png" alt="" title="#slider-direction-2"  />
+						<img src="images/portada.png" alt="" title="#slider-direction-3"  />
 					</div>
 					<!-- direction 1 -->
 					<div id="slider-direction-1" class="slider-direction">
 						<div class="slider-content text-center">
 							<div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
-								<h4 class="slider-1-title-1">Welcome to <span>Sheltek</span></h4>
+								<h4 class="slider-1-title-1">Bienvenido a <span>Biagsa</span></h4>
 							</div>
 							<div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
-								<h1 class="slider-1-title-2">FIND YOUR DREAM HOUSE WITH US</h1>
+								<h1 class="slider-1-title-2">Casas y terrenos</h1>
 							</div>
 							<div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
 								<p class="slider-1-desc">
@@ -423,10 +423,10 @@
 					<div id="slider-direction-2" class="slider-direction">
 						<div class="slider-content text-left">
 							<div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
-								<h4 class="slider-1-title-1">Welcome to <span>Sheltek</span></h4>
+								<h4 class="slider-1-title-1">Bienvenido a <span>Biagsa</span></h4>
 							</div>
 							<div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
-								<h1 class="slider-1-title-2">FIND YOUR DREAM HOUSE WITH US</h1>
+								<h1 class="slider-1-title-2">Casas y terrenos</h1>
 							</div>
 							<div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
 								<p class="slider-1-desc">
@@ -444,10 +444,10 @@
 					<div id="slider-direction-3" class="slider-direction">
 						<div class="slider-content text-right">
 							<div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
-								<h4 class="slider-1-title-1">Welcome to <span>Sheltek</span></h4>
+								<h4 class="slider-1-title-1">Bienvenido a <span>Biagsa</span></h4>
 							</div>
 							<div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
-								<h1 class="slider-1-title-2">FIND YOUR DREAM HOUSE WITH US</h1>
+								<h1 class="slider-1-title-2">Casas y terrenos</h1>
 							</div>
 							<div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
 								<p class="slider-1-desc">
