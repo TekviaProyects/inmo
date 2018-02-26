@@ -1,6 +1,6 @@
 <style>
 	.bread-bg-per {
-		background: rgba(0, 0, 0, 0) url(<?php echo $_REQUEST['image'] ?>) no-repeat scroll 0 0 /cover;
+		background: rgba(0, 0, 0, 0) url('<?php echo $_REQUEST['image'] ?>') no-repeat scroll 0 0 /cover;
 	}
 </style>
 
@@ -45,6 +45,19 @@
                                 	<img src="images/icons/4.png" alt="">
                                 	<?php echo $_REQUEST['levels'] ?> Niveles
                                 </li>
+                                <li><?php 
+                                	switch ($_REQUEST['type']) {
+										case 1:
+											echo "Renta";
+											break;
+										case 2:
+											echo "Venta";
+											break;
+										case 3:
+											echo "Fideicomiso";
+											break;
+									} ?>
+								</li>
                                 <li>$<?php echo number_format($_REQUEST['price']) ?></li>
                             </ul>
                             <p><img src="images/icons/location.png" alt=""><?php echo $_REQUEST['address'] ?></p>
