@@ -27,7 +27,6 @@
 						<h2><?php echo $_REQUEST['title'] ?></h2>
 					</div>
 					<div class="pro-details-condition">
-                        <h5>Condition</h5>
                         <div class="pro-details-condition-inner bg-gray">
                             <ul class="condition-list">
                                 <li><img src="images/icons/5.png" alt=""><?php echo $_REQUEST['num_room'] ?> Habitaciones</li>
