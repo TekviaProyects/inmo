@@ -1,3 +1,7 @@
+<?php
+	error_reporting(0);
+?>
+
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -41,7 +45,6 @@
 
     <!-- Body main wrapper start -->
     <div class="wrapper">
-    
         <!-- HEADER AREA START -->
 			<header class="header-area header-wrapper">
 				<div class="header-top-bar bg-white">
@@ -110,13 +113,13 @@
 
 											</li>
 											<li>
-												<a href="properties.html">Busca una Propiedad</a>
+												<a href="properties.php">Busca una Propiedad</a>
 												<ul class="drop-menu">
 													<li>
-														<a href="properties.html">Renta</a>
+														<a href="properties.php?type=1">Renta</a>
 													</li>
 													<li>
-														<a href="properties.html">Venta</a>
+														<a href="properties.php?type=2">Venta</a>
 													</li>
 
 												</ul>
@@ -174,10 +177,10 @@
                                             <li><a href="service-details.html">Service details</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="properties.html">Propiedades</a>
+                                    <li><a href="properties.php">Propiedades</a>
                                         <ul>
-                                            <li><a href="properties.html">Properties</a></li>
-                                            <li><a href="properties.html">Properties left sidebar</a></li>
+                                            <li><a href="properties.php">Properties</a></li>
+                                            <li><a href="properties.php">Properties left sidebar</a></li>
                                             <li><a href="properties-right-sidebar.html">Properties right sidebar</a></li>
                                             <li><a href="properties-details.html">Properties details</a></li>
                                         </ul>
@@ -212,35 +215,19 @@
             </div>
         </div>
         <!-- MOBILE MENU AREA END -->
-
-        <!-- BREADCRUMBS AREA START -->
-        <div class="breadcrumbs-area bread-bg-1 bg-opacity-black-70">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="breadcrumbs">
-                            <h2 class="breadcrumbs-title">Propiedades</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- BREADCRUMBS AREA END -->
-
         <!-- Start page content -->
         <section id="page-content" class="page-wrapper">
-            
-            <!-- FEATURED FLAT AREA START -->
-            <div class="featured-flat-area pt-115 pb-60">
-                <div class="container">
-                	<div class="row">
+        <!-- FIND HOME AREA START -->
+			<div class="find-home-area bg-blue call-to-bg plr-140 pt-60 pb-20">
+				<div class="container-fluid">
+					<div class="row">
 						<div class="col-md-3 col-xs-12">
 							<div class="section-title text-white">
 								<h3>BUSCAR AQUI</h3>
 								<h2 class="h1">TU HOGAR</h2>
 							</div>
 						</div>
-						<div class="col-xs-12">
+						<div class="col-md-9 col-xs-12">
 							<div class="find-homes">
 								<div class="row">
 									<div class="col-sm-3 col-xs-12">
@@ -387,8 +374,8 @@
 													div: 'div_estates',
 													order: ' id DESC'
 												})"
-												href="#slider-range"
-												class="button-1 btn-block btn-hover-1">
+												class="button-1 btn-block btn-hover-1" .
+												href="">
 												BUSCAR
 											</a>
 										</div>
@@ -397,14 +384,15 @@
 							</div>
 						</div>
 					</div>
-                    <div class="featured-flat">
-                        <div class="row" id="div_estates">
-                            
-                        </div>
-                    </div>
+				</div>
+			</div><br /><br />
+			<!-- FIND HOME AREA END -->
+			
+            <div class="featured-flat" style="padding: 20px">
+                <div class="row" id="div_estates">
+                    
                 </div>
             </div>
-            <!-- FEATURED FLAT AREA END -->
             
             <!-- SUBSCRIBE AREA START -->
             <div class="subscribe-area bg-blue call-to-bg plr-140 ptb-50">
@@ -561,9 +549,10 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsZOvqzL9c7_O7Fj7t3FDt77nejjwbZXw&libraries=places,geometry" async defer></script>
 	<script>
 		estates.list_estates({
+			type: '<?php echo $_REQUEST['type'] ?>',
 			div: 'div_estates',
-			limit: 9,
-			order: ' id DESC'
+			order: ' id DESC',
+			limit: 9
 		});
 	</script>
 </body>

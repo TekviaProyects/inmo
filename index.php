@@ -131,13 +131,13 @@
 
 											</li>
 											<li>
-												<a href="properties.html">Busca una Propiedad</a>
+												<a href="properties.php">Busca una Propiedad</a>
 												<ul class="drop-menu">
 													<li>
-														<a href="properties.html">Renta</a>
+														<a href="properties.php">Renta</a>
 													</li>
 													<li>
-														<a href="properties.html">Venta</a>
+														<a href="properties.php">Venta</a>
 													</li>
 
 												</ul>
@@ -224,13 +224,13 @@
 											</ul>
 										</li>
 										<li>
-											<a href="properties.html">Properties</a>
+											<a href="properties.php">Properties</a>
 											<ul>
 												<li>
-													<a href="properties.html">Properties</a>
+													<a href="properties.php">Properties</a>
 												</li>
 												<li>
-													<a href="properties.html">Properties left sidebar</a>
+													<a href="properties.php">Properties left sidebar</a>
 												</li>
 												<li>
 													<a href="properties-right-sidebar.html">Properties right sidebar</a>
@@ -345,7 +345,7 @@
 								</p>
 							</div>
 							<div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2s">
-								<a class="slider-button mt-40" href="properties.html">Buscar </a>
+								<a class="slider-button mt-40" href="properties.php">Buscar </a>
 							</div>
 						</div>
 					</div>
