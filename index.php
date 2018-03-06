@@ -7,7 +7,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>Sheltek || Home-1</title>
+		<title>Biagsa Inmobiliaria || Home</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -36,6 +36,12 @@
 
 		<!-- Modernizr JS -->
 		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+		
+		<style>
+			.price_slider_amount > input{
+				width: 100%;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -63,9 +69,9 @@
 											<img src="images/icons/phone.png" alt="">
 										</div>
 										<div class="header-info">
-											<h6>+88 (012) 564 979 56</h6>
+											<h6></h6>
 											<p>
-												We are open 9 am - 10pm
+												Atencion Chat 9 am - 6pm
 											</p>
 										</div>
 									</div>
@@ -74,9 +80,9 @@
 											<img src="images/icons/mail-open.png" alt="">
 										</div>
 										<div class="header-info">
-											<h6><a href="mailto:hnasir770@gmail.com">info@sheltek.com</a></h6>
+											<h6><a href="mailto:info@biagsa.com">atencion@biagsa.com</a></h6>
 											<p>
-												You can mail us
+												Envianos un Correo
 											</p>
 										</div>
 									</div>
@@ -88,7 +94,7 @@
 										<button class="search-icon" type="submit">
 											<img src="images/icons/search.png" alt="">
 										</button>
-										<input type="text" placeholder="Search...">
+										<input type="text" placeholder="Buscar...">
 									</form>
 								</div>
 							</div>
@@ -106,46 +112,12 @@
 									<nav id="primary-menu">
 										<ul class="main-menu text-center">
 											<li>
-												<a href="index.php">Home</a>
-												<ul class="drop-menu">
-													<li>
-														<a href="index.php">Home-1</a>
-													</li>
-													<li>
-														<a href="index-2.html">home-2</a>
-													</li>
-													<li>
-														<a href="index-3.html">home-3</a>
-													</li>
-													<li>
-														<a href="index-4.html">Background Video</a>
-													</li>
-													<li>
-														<a href="index-5.html">Background Video overlay</a>
-													</li>
-													<li>
-														<a href="index-6.html">BG Video dot overlay</a>
-													</li>
-													<li>
-														<a href="index-7.html">Animated Text</a>
-													</li>
-													<li>
-														<a href="index-8.html">Animated Text dot overlay</a>
-													</li>
-													<li>
-														<a href="index-9.html">Box layout - 1</a>
-													</li>
-													<li>
-														<a href="index-10.html">Box layout - 2</a>
-													</li>
-													<li>
-														<a href="index-11.html">Box layout - 3</a>
-													</li>
-												</ul>
+												<a href="index.php">Inicio</a>
+
 											</li><?php
 											if($_REQUEST['add'] == 1){ ?>
 												<li class="mega-parent">
-													<a 
+													<a
 														onclick="estates.add({
 															div: 'div_estates'
 														})"
@@ -155,95 +127,34 @@
 												</li><?php
 											} ?>
 											<li>
-												<a href="service.html">Service</a>
+												<a href="service.html">Conocenos</a>
+
+											</li>
+											<li>
+												<a href="properties.html">Busca una Propiedad</a>
 												<ul class="drop-menu">
 													<li>
-														<a href="service.html">Service</a>
+														<a href="properties.html">Renta</a>
 													</li>
 													<li>
-														<a href="service-details.html">Service details</a>
+														<a href="properties.html">Venta</a>
 													</li>
+
 												</ul>
 											</li>
 											<li>
-												<a href="properties.html">Properties</a>
-												<ul class="drop-menu">
-													<li>
-														<a href="properties.html">Properties</a>
-													</li>
-													<li>
-														<a href="properties-left-sidebar.html">Properties left sidebar</a>
-													</li>
-													<li>
-														<a href="properties-right-sidebar.html">Properties right sidebar</a>
-													</li>
-													<li>
-														<a href="properties-details.html">Properties details</a>
-													</li>
-												</ul>
+												<a href="agent.html">Agentes</a>
+
 											</li>
 											<li>
-												<a href="agent.html">Agent</a>
-												<ul class="drop-menu">
-													<li>
-														<a href="agent.html">Agent</a>
-													</li>
-													<li>
-														<a href="agent-details.html">Agent details</a>
-													</li>
-												</ul>
-											</li>
-											<li>
-												<a href="#">Pages's</a>
-												<ul class="drop-menu menu-right">
-													<li>
-														<a href="about.html">About</a>
-													</li>
-													<li>
-														<a href="agent.html">Agent</a>
-													</li>
-													<li>
-														<a href="agent-details.html">Agent-details</a>
-													</li>
-													<li>
-														<a href="features.html">Features</a>
-													</li>
-													<li>
-														<a href="service.html">Service</a>
-													</li>
-													<li>
-														<a href="service-details.html">Service details</a>
-													</li>
-													<li>
-														<a href="login.html">Login</a>
-													</li>
-													<li>
-														<a href="404.html">404</a>
-													</li>
-													<li>
-														<a href="contact.html">Contact</a>
-													</li>
-												</ul>
+												<a href="index.php">Propietarios</a>
+
 											</li>
 											<li>
 												<a href="blog.html">Blog</a>
-												<ul class="drop-menu menu-right">
-													<li>
-														<a href="blog.html">Blog</a>
-													</li>
-													<li>
-														<a href="blog-left-sidebar.html">Blog left sidebar</a>
-													</li>
-													<li>
-														<a href="blog-right-sidebar.html">Blog right sidebar</a>
-													</li>
-													<li>
-														<a href="single-blog.html">Single Bloge</a>
-													</li>
-												</ul>
-											</li>
+										  </li>
 											<li>
-												<a href="contact.html">Contact</a>
+												<a href="contact.html">Contactanos</a>
 											</li>
 										</ul>
 									</nav>
@@ -319,7 +230,7 @@
 													<a href="properties.html">Properties</a>
 												</li>
 												<li>
-													<a href="properties-left-sidebar.html">Properties left sidebar</a>
+													<a href="properties.html">Properties left sidebar</a>
 												</li>
 												<li>
 													<a href="properties-right-sidebar.html">Properties right sidebar</a>
@@ -405,17 +316,17 @@
 								<h4 class="slider-1-title-1">Bienvenido a <span>Biagsa</span></h4>
 							</div>
 							<div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
-								<h1 class="slider-1-title-2">Casas y terrenos</h1>
+								<h1 class="slider-1-title-2">Donde encontraras tu hogar ideal</h1>
 							</div>
 							<div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
 								<p class="slider-1-desc">
-									Lorem consectetur adipiscing elit, sed do eiusmod tempor dolor sit amet
+									Explotamos la tecnología haciendo mas simple el proceso
 									<br>
-									contetur  adipiscing elit, sed do  eiusmod tempor incididunt
+									comprar o rentar inmuebles.
 								</p>
 							</div>
 							<div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2s">
-								<a class="slider-button mt-40" href="#">Read More</a>
+								<a class="slider-button mt-40" href="#">Buscar Ahora</a>
 							</div>
 						</div>
 					</div>
@@ -426,17 +337,15 @@
 								<h4 class="slider-1-title-1">Bienvenido a <span>Biagsa</span></h4>
 							</div>
 							<div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
-								<h1 class="slider-1-title-2">Casas y terrenos</h1>
+								<h1 class="slider-1-title-2">Casas y Terrenos</h1>
 							</div>
 							<div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
 								<p class="slider-1-desc">
-									Lorem consectetur adipiscing elit, sed do eiusmod tempor dolor sit amet
-									<br>
-									contetur  adipiscing elit, sed do  eiusmod tempor incididunt
+									El sitio donde encontraras la casa de tus sueños.
 								</p>
 							</div>
 							<div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2s">
-								<a class="slider-button mt-40" href="#">Read More</a>
+								<a class="slider-button mt-40" href="properties.html">Buscar </a>
 							</div>
 						</div>
 					</div>
@@ -447,17 +356,15 @@
 								<h4 class="slider-1-title-1">Bienvenido a <span>Biagsa</span></h4>
 							</div>
 							<div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
-								<h1 class="slider-1-title-2">Casas y terrenos</h1>
+								<h1 class="slider-1-title-2">Casas y Terrenos</h1>
 							</div>
 							<div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
 								<p class="slider-1-desc">
-									Lorem consectetur adipiscing elit, sed do eiusmod tempor dolor sit amet
-									<br>
-									contetur  adipiscing elit, sed do  eiusmod tempor incididunt
+									Biagsa de la mano con propietarios satisfechos.
 								</p>
 							</div>
 							<div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="2s">
-								<a class="slider-button mt-40" href="#">Read More</a>
+								<a class="slider-button mt-40" href="contact.html">Mas Info</a>
 							</div>
 						</div>
 					</div>
@@ -474,8 +381,8 @@
 						<div class="row">
 							<div class="col-md-3 col-xs-12">
 								<div class="section-title text-white">
-									<h3>FIND YOUR</h3>
-									<h2 class="h1">HOME HERE</h2>
+									<h3>BUSCAR AQUI</h3>
+									<h2 class="h1">TU HOGAR</h2>
 								</div>
 							</div>
 							<div class="col-md-9 col-xs-12">
@@ -483,99 +390,152 @@
 									<div class="row">
 										<div class="col-sm-3 col-xs-12">
 											<div class="find-home-item custom-select">
-												<select class="selectpicker" title="Location" data-hide-disabled="true" data-live-search="true">
-													<optgroup disabled="disabled" label="disabled">
-														<option>Hidden</option>
-													</optgroup>
-													<optgroup label="Australia">
-														<option>Sydney</option>
-														<option>Melbourne</option>
-														<option>Cairns</option>
-													</optgroup>
-													<optgroup label="USA">
-														<option>South Carolina</option>
-														<option>Florida</option>
-														<option>Rhode Island</option>
-													</optgroup>
-												</select>
-											</div>
-										</div>
-										<div class="col-sm-3 col-xs-12">
-											<div class="find-home-item custom-select">
-												<select class="selectpicker" title="Sub - Location" data-hide-disabled="true" data-live-search="true">
-													<optgroup disabled="disabled" label="disabled">
-														<option>Hidden</option>
-													</optgroup>
-													<optgroup label="Australia">
-														<option>southeastern coast</option>
-														<option>southeastern tip</option>
-														<option>northwest corner</option>
-													</optgroup>
-													<optgroup label="USA">
-														<option>Charleston</option>
-														<option>St. Petersburg</option>
-														<option>Newport</option>
-													</optgroup>
+												<select
+													id="state_search"
+													class="selectpicker"
+													title="Estado"
+													data-hide-disabled="true"
+													data-live-search="true">
+													<option value="">Todos</option>
+													<option value="1">Aguascalientes</option>
+													<option value="2">Baja California</option>
+													<option value="3">Baja California Sur</option>
+													<option value="4">Campeche</option>
+													<option value="5">Coahuila de Zaragoza</option>
+													<option value="6">Colima</option>
+													<option value="7">Chiapas</option>
+													<option value="8">Chihuahua</option>
+													<option value="9">Distrito Federal</option>
+													<option value="10">Durango</option>
+													<option value="11">Guanajuato</option>
+													<option value="12">Guerrero</option>
+													<option value="13">Hidalgo</option>
+													<option value="14">Jalisco</option>
+													<option value="15">México</option>
+													<option value="16">Michoacán de Ocampo</option>
+													<option value="17">Morelos</option>
+													<option value="18">Nayarit</option>
+													<option value="19">Nuevo León</option>
+													<option value="20">Oaxaca</option>
+													<option value="21">Puebla</option>
+													<option value="22">Querétaro</option>
+													<option value="23">Quintana Roo</option>
+													<option value="24">San Luis Potosí</option>
+													<option value="25">Sinaloa</option>
+													<option value="26">Sonora</option>
+													<option value="27">Tabasco</option>
+													<option value="28">Tamaulipas</option>
+													<option value="29">Tlaxcala</option>
+													<option value="30">Veracruz de Ignacio de la Llave</option>
+													<option value="31">Yucatán</option>
+													<option value="32">Zacatecas</option>
 												</select>
 											</div>
 										</div>
 										<div class="col-sm-3 col-xs-12">
 											<div class="find-home-item">
-												<input type="text" name="min-area" placeholder="Min area (sqft)">
+												<input 
+													id="min_area"
+													type="text" 
+													name="min_area" 
+													placeholder="Area minima (mts)">
 											</div>
 										</div>
 										<div class="col-sm-3 col-xs-12">
 											<div class="find-home-item">
-												<input type="text" name="max-area" placeholder="Max area (sqft)">
+												<input 
+													id="max_area"
+													type="text" 
+													name="max_area" 
+													placeholder="Area maxima (mts)">
 											</div>
 										</div>
 										<div class="col-sm-3 col-xs-12">
 											<div class="find-home-item  custom-select">
-												<select class="selectpicker" title="No. of Beadrooms" data-hide-disabled="true">
+												<select 
+													id="num_room"
+													class="selectpicker" 
+													title="No. de cuartos" 
+													data-hide-disabled="true">
 													<optgroup  label="1">
-														<option label="1">1 Beadrooms</option>
-														<option>2 Beadrooms</option>
-														<option>3 Beadrooms</option>
-														<option>4 Beadrooms</option>
-														<option>5 Beadrooms</option>
+														<option value="1" label="1">1 Habitación</option>
+														<option value="2">2 Habitaciónes</option>
+														<option value="3">3 Habitaciónes</option>
+														<option value="4">4 Habitaciónes</option>
+														<option value="5">5 Habitaciónes</option>
 													</optgroup>
 												</select>
 											</div>
 										</div>
 										<div class="col-sm-3 col-xs-12">
 											<div class="find-home-item custom-select">
-												<select class="selectpicker" title="No. of Bathrooms" data-hide-disabled="true">
-													<optgroup label="2">
-														<option>1 Bathrooms</option>
-														<option>2 Bathrooms</option>
-														<option>3 Bathrooms</option>
-														<option>4 Bathrooms</option>
-														<option>5 Bathrooms</option>
+												<select 
+													id="num_bathroom"
+													class="selectpicker" 
+													title="No. de baños" 
+													data-hide-disabled="true">
+													<optgroup  label="1">
+														<option value="1" label="1">1 Baño</option>
+														<option value="2">2 Baños</option>
+														<option value="3">3 Baños</option>
+														<option value="4">4 Baños</option>
+														<option value="5">5 Baños</option>
+													</optgroup>
+												</select>
+											</div>
+										</div>
+										<div class="col-sm-3 col-xs-12">
+											<div class="find-home-item custom-select">
+												<select 
+													id="type"
+													class="selectpicker" 
+													title="Tipo" 
+													data-hide-disabled="true">
+													<optgroup  label="tipo">
+														<option value="" label="1">Todos</option>
+														<option value="1">Renta</option>
+														<option value="2">Venta</option>
+														<option value="3">Fideicomiso</option>
 													</optgroup>
 												</select>
 											</div>
 										</div>
 										<div class="col-sm-6 col-xs-12">
-											<div class="row">
-												<div class="col-sm-7 col-xs-12">
-													<div class="find-home-item">
-														<!-- shop-filter -->
-														<div class="shop-filter">
-															<div class="price_filter">
-																<div class="price_slider_amount">
-																	<input type="submit"  value="You range :"/>
-																	<input type="text" id="amount" name="price"  placeholder="Add Your Price" />
-																</div>
-																<div id="slider-range"></div>
-															</div>
+											<div class="find-home-item">
+												<!-- shop-filter -->
+												<div class="shop-filter">
+													<div class="price_filter">
+														<div class="price_slider_amount">
+															<input type="submit"  value=""/>
+															<input 
+																type="text" 
+																id="amount" 
+																name="price"  
+																placeholder="Add Your Price" />
 														</div>
+														<div id="slider-range"></div>
 													</div>
 												</div>
-												<div class="col-sm-5 col-xs-12">
-													<div class="find-home-item mb-0-xs">
-														<a class="button-1 btn-block btn-hover-1" href="#">SEARCH</a>
-													</div>
-												</div>
+											</div>
+										</div>
+										<div class="col-xs-12 col-md-2">
+											<div class="find-home-item mb-0-xs">
+												<a 
+													onclick="estates.list_estates({
+														num_bathroom: $('#num_bathroom').val(),
+														state: $('#state_search').val(),
+														min_area: $('#min_area').val(),
+														max_area: $('#max_area').val(),
+														num_room: $('#num_room').val(),
+														amount: $('#amount').val(),
+														type: $('#type').val(),
+														div: 'div_estates',
+														order: ' id DESC'
+													})"
+													class="button-1 btn-block btn-hover-1" .
+													href="#div_estates">
+													BUSCAR
+												</a>
 											</div>
 										</div>
 									</div>
@@ -585,38 +545,8 @@
 					</div>
 				</div>
 				<!-- FIND HOME AREA END -->
-
-				<!-- ABOUT SHELTEK AREA START -->
-				<div class="about-sheltek-area ptb-115">
-					<div class="container">
-						<div class="row">
-							<div class="col-sm-6 col-xs-12">
-								<div class="section-title mb-30">
-									<h3>SOME WORD </h3>
-									<h2>ABOUT SHELTEK</h2>
-								</div>
-								<div class="about-sheltek-info">
-									<p>
-										<span data-placement="top" data-toggle="tooltip" data-original-title="The name you can trust" class="tooltip-content">Sheltek</span> is the best theme for  elit, sed do eiusmod tempor dolor sit amet, conse ctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et lorna aliquatd minim veniam, quis nostrud exercitation oris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolo.
-									</p>
-									<p>
-										Lorem is a dummy text do eiusmod tempor dolor sit amet, onsectetur adip iscing elit, sed do eiusmod tempor incididunt ut labore et lorna aliqua Ut enim onsectetur
-									</p>
-									<p>
-										Lorem is a dummy text do eiusmod tempor dolor sit amet, onsectetur adip iscing elit, sed do eiusmod tempor incididunt ut labore et lorna aliqua Ut enim onsectetur
-									</p>
-								</div>
-							</div>
-							<div class="col-sm-6 col-xs-12">
-								<div class="about-image">
-									<a href="about.html"><img src="images/about/1.jpg" alt=""></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- ABOUT SHELTEK AREA END -->
-				<!-- FEATURED FLAT AREA START -->
+				
+<!-- INICIA AREA DE CASAS Y TERRENOS VISTA -->
 				<div class="featured-flat-area pt-115 pb-80">
 					<div class="container">
 						<div class="row">
@@ -937,6 +867,40 @@
 						</div>
 					</div>
 				</div>
+       <!-- TERMINA AREA DE CASAS Y TERRENOS VISTA -->
+
+				<!-- ABOUT SHELTEK AREA START -->
+				<div class="about-sheltek-area ptb-115">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-6 col-xs-12">
+								<div class="section-title mb-30">
+									<h3>SOME WORD </h3>
+									<h2>ABOUT SHELTEK</h2>
+								</div>
+								<div class="about-sheltek-info">
+									<p>
+										<span data-placement="top" data-toggle="tooltip" data-original-title="The name you can trust" class="tooltip-content">Sheltek</span> is the best theme for  elit, sed do eiusmod tempor dolor sit amet, conse ctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et lorna aliquatd minim veniam, quis nostrud exercitation oris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolo.
+									</p>
+									<p>
+										Lorem is a dummy text do eiusmod tempor dolor sit amet, onsectetur adip iscing elit, sed do eiusmod tempor incididunt ut labore et lorna aliqua Ut enim onsectetur
+									</p>
+									<p>
+										Lorem is a dummy text do eiusmod tempor dolor sit amet, onsectetur adip iscing elit, sed do eiusmod tempor incididunt ut labore et lorna aliqua Ut enim onsectetur
+									</p>
+								</div>
+							</div>
+							<div class="col-sm-6 col-xs-12">
+								<div class="about-image">
+									<a href="about.html"><img src="images/about/1.jpg" alt=""></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ABOUT SHELTEK AREA END -->
+				<!-- FEATURED FLAT AREA START -->
+
 				<!-- FEATURED FLAT AREA END -->
 				<!-- BOOKING AREA START -->
 				<div class="booking-area bg-1 call-to-bg plr-140 pt-75">
@@ -944,15 +908,15 @@
 						<div class="row">
 							<div class="col-md-3 col-sm-4 col-xs-12">
 								<div class="section-title text-white">
-									<h3>BOOK YOUR</h3>
-									<h2 class="h1">HOME HERE</h2>
+									<h3>CONTACTANOS</h3>
+									<h2 class="h1">EMAIL</h2>
 								</div>
 							</div>
 							<div class="col-md-9 col-sm-8 col-xs-12">
 								<div class="booking-conternt clearfix">
 									<div class="book-house text-white">
-										<h2>BOOK YO`UR APPARTMENT OR HOUSE </h2>
-										<h2 class="h5">CALL US ON : +0123  456  789 </h2>
+										<h2>ESTAMOS PARA AYUDARTE</h2>
+										<h2 class="h5">INICIA EL CHAT AHORA</h2>
 									</div>
 									<div class="booking-imgae">
 										<img src="images/others/booking.png" alt="">
@@ -1602,10 +1566,10 @@
 		<script src="js/main.js"></script>
 	<!-- sweetalert -->
 		<script type="text/javascript" src="https://unpkg.com/sweetalert2@7.11.0/dist/sweetalert2.all.js"></script>
-		
+
 	<!-- System -->
 		<script src="js_system/estates.js"></script>
-		
+
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsZOvqzL9c7_O7Fj7t3FDt77nejjwbZXw&libraries=places,geometry" async defer></script>
 		<script>
 			estates.list_estates({

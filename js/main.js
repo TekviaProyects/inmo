@@ -81,9 +81,9 @@
     ******************************************** */
     $( "#slider-range" ).slider({
         range: true,
-        min: 20,
-        max: 2500,
-        values: [ 80, 2000 ],
+        min: 1000,
+        max: 9999999,
+        values: [ 1000, 3000000 ],
         slide: function( event, ui ) {
             $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
         }

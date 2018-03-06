@@ -1,8 +1,4 @@
 <?php 
-	$condition = '';
-	$condition .= (!empty($_POST['order'])) ? ' ORDER BY '.$_POST['order'] : '';
-	$condition .= (!empty($_POST['limit'])) ? ' LIMIT '.$_POST['limit'] : '';
-	
 	error_reporting(E_ALL);
 	mysqli_report(MYSQLI_REPORT_STRICT);
 	
@@ -15,14 +11,36 @@
 	    exit();
 	}
 	
+	$condition = '';
+	$condition .= (!empty($_POST['num_bathroom'])) ? ' AND num_bathroom = '.$_POST['num_bathroom'] : '';
+	$condition .= (!empty($_POST['num_room'])) ? ' AND num_room = '.$_POST['num_room'] : '';
+	$condition .= (!empty($_POST['min_area'])) ? ' AND surface > '.$_POST['min_area'] : '';
+	$condition .= (!empty($_POST['max_area'])) ? ' AND surface < '.$_POST['max_area'] : '';
+	$condition .= (!empty($_POST['state'])) ? ' AND state = '.$_POST['state'] : '';
+	$condition .= (!empty($_POST['type'])) ? ' AND type = '.$_POST['type'] : '';
+	if (!empty($_POST['amount'])) {
+		$amount = explode(' - $', $_POST['amount']);
+		
+		$min_amount = str_replace('$', '', $amount[0]);
+		$max_amount = $amount[1];
+		
+		$condition .=  ' AND (price BETWEEN '.$min_amount.' AND '.$max_amount.')';
+	}
+	
+	
+	$condition .= (!empty($_POST['order'])) ? ' ORDER BY '.$_POST['order'] : '';
+	$condition .= (!empty($_POST['limit'])) ? ' LIMIT '.$_POST['limit'] : '';
+	
 	$sql = "SELECT
 				*
 			FROM
-				inmuebles ".
+				inmuebles 
+			WHERE 
+				1= 1 ".
 			$condition;
 	$result = mysqli_query($conexion, $sql);
 	if (!$result){
-  		echo("Error description: " . mysqli_error($conexion));
+  		echo("Error description: " . mysqli_error($conexion).'----'.$sql);
 		return;
   	}
 	
@@ -32,6 +50,20 @@
 	}
 	
 	$conexion->close();
+	
+	
+	if (empty($rows)) {?>
+		<div align="center">
+			<h3>
+				<span class="label label-default">
+					* Sin resultados *
+				</span>
+			</h3>
+		</div><?php
+
+		return;
+	}
+	
 	
 	foreach ($rows as $key => $value) {
 		$value['div'] = 'div_estates'; 
