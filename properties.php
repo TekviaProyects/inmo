@@ -133,7 +133,7 @@
 
 											</li>
 											<li>
-												<a href="blog.html">Blog</a>
+												<a href="blog.php">Blog</a>
 										  </li>
 											<li>
 												<a href="contact.html">Contactanos</a>
@@ -198,12 +198,12 @@
                                             <li><a href="contact.html">Contact</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="blog.html">Blog</a>
+                                    <li><a href="blog.php">Blog</a>
                                         <ul>
-                                            <li><a href="blog.html">Blog</a></li>
+                                            <li><a href="blog.php">Blog</a></li>
                                             <li><a href="blog-left-sidebar.html">Blog left sidebar</a></li>
                                             <li><a href="blog-right-sidebar.html">Blog right sidebar</a></li>
-                                            <li><a href="single-blog.html">Single Bloge</a></li>
+                                            <li><a href="single-blog.php">Single Bloge</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="contact.html">Contact</a></li>

@@ -125,6 +125,18 @@
 														Agregar inmueble
 													</a>
 												</li><?php
+											}
+												
+											if($_REQUEST['blog'] == 1){ ?>
+												<li class="mega-parent">
+													<a
+														onclick="blog.add({
+															div: 'div_estates'
+														})"
+														href="#slider-range">
+														Agregar al blog
+													</a>
+												</li><?php
 											} ?>
 											<li>
 												<a href="service.html">Conocenos</a>
@@ -151,7 +163,7 @@
 
 											</li>
 											<li>
-												<a href="blog.html">Blog</a>
+												<a href="blog.php">Blog</a>
 										  </li>
 											<li>
 												<a href="contact.html">Contactanos</a>
@@ -273,10 +285,10 @@
 											</ul>
 										</li>
 										<li>
-											<a href="blog.html">Blog</a>
+											<a href="blog.php">Blog</a>
 											<ul>
 												<li>
-													<a href="blog.html">Blog</a>
+													<a href="blog.php">Blog</a>
 												</li>
 												<li>
 													<a href="blog-left-sidebar.html">Blog left sidebar</a>
@@ -285,7 +297,7 @@
 													<a href="blog-right-sidebar.html">Blog right sidebar</a>
 												</li>
 												<li>
-													<a href="single-blog.html">Single Bloge</a>
+													<a href="single-blog.php">Single Bloge</a>
 												</li>
 											</ul>
 										</li>
@@ -1318,11 +1330,11 @@
 								<div class="col-md-12">
 									<article class="blog-item bg-gray">
 										<div class="blog-image">
-											<a href="single-blog.html"><img src="images/blog/1.jpg" alt=""></a>
+											<a href="single-blog.php"><img src="images/blog/1.jpg" alt=""></a>
 										</div>
 										<div class="blog-info">
 											<div class="post-title-time">
-												<h5><a href="single-blog.html">Maridland de Villa</a></h5>
+												<h5><a href="single-blog.php">Maridland de Villa</a></h5>
 												<p>
 													July 30, 2016 / 10 am
 												</p>
@@ -1330,7 +1342,7 @@
 											<p>
 												Lorem must explain to you how all this mistaolt denouncing pleasure and praising pain wasnad I will give you a complete pain was praising
 											</p>
-											<a class="read-more" href="single-blog.html">Read more</a>
+											<a class="read-more" href="single-blog.php">Read more</a>
 										</div>
 									</article>
 								</div>
@@ -1338,11 +1350,11 @@
 								<div class="col-md-12">
 									<article class="blog-item bg-gray">
 										<div class="blog-image">
-											<a href="single-blog.html"><img src="images/blog/2.jpg" alt=""></a>
+											<a href="single-blog.php"><img src="images/blog/2.jpg" alt=""></a>
 										</div>
 										<div class="blog-info">
 											<div class="post-title-time">
-												<h5><a href="single-blog.html">Latest Design House</a></h5>
+												<h5><a href="single-blog.php">Latest Design House</a></h5>
 												<p>
 													July 30, 2016 / 10 am
 												</p>
@@ -1350,7 +1362,7 @@
 											<p>
 												Lorem must explain to you how all this mistaolt denouncing pleasure and praising pain wasnad I will give you a complete pain was praising
 											</p>
-											<a class="read-more" href="single-blog.html">Read more</a>
+											<a class="read-more" href="single-blog.php">Read more</a>
 										</div>
 									</article>
 								</div>
@@ -1358,11 +1370,11 @@
 								<div class="col-md-12">
 									<article class="blog-item bg-gray">
 										<div class="blog-image">
-											<a href="single-blog.html"><img src="images/blog/3.jpg" alt=""></a>
+											<a href="single-blog.php"><img src="images/blog/3.jpg" alt=""></a>
 										</div>
 										<div class="blog-info">
 											<div class="post-title-time">
-												<h5><a href="single-blog.html">Duplex Villa House</a></h5>
+												<h5><a href="single-blog.php">Duplex Villa House</a></h5>
 												<p>
 													July 30, 2016 / 10 am
 												</p>
@@ -1370,7 +1382,7 @@
 											<p>
 												Lorem must explain to you how all this mistaolt denouncing pleasure and praising pain wasnad I will give you a complete pain was praising
 											</p>
-											<a class="read-more" href="single-blog.html">Read more</a>
+											<a class="read-more" href="single-blog.php">Read more</a>
 										</div>
 									</article>
 								</div>
@@ -1378,11 +1390,11 @@
 								<div class="col-md-12">
 									<article class="blog-item bg-gray">
 										<div class="blog-image">
-											<a href="single-blog.html"><img src="images/blog/2.jpg" alt=""></a>
+											<a href="single-blog.php"><img src="images/blog/2.jpg" alt=""></a>
 										</div>
 										<div class="blog-info">
 											<div class="post-title-time">
-												<h5><a href="single-blog.html">Latest Design House</a></h5>
+												<h5><a href="single-blog.php">Latest Design House</a></h5>
 												<p>
 													July 30, 2016 / 10 am
 												</p>
@@ -1390,7 +1402,7 @@
 											<p>
 												Lorem must explain to you how all this mistaolt denouncing pleasure and praising pain wasnad I will give you a complete pain was praising
 											</p>
-											<a class="read-more" href="single-blog.html">Read more</a>
+											<a class="read-more" href="single-blog.php">Read more</a>
 										</div>
 									</article>
 								</div>
@@ -1474,10 +1486,10 @@
 									<ul class="footer-latest-news">
 										<li>
 											<div class="latest-news-image">
-												<a href="single-blog.html"><img src="images/blog/1.jpg" alt=""></a>
+												<a href="single-blog.php"><img src="images/blog/1.jpg" alt=""></a>
 											</div>
 											<div class="latest-news-info">
-												<h6><a href="single-blog.html">Beautiful Home</a></h6>
+												<h6><a href="single-blog.php">Beautiful Home</a></h6>
 												<p>
 													Lorem ipsum dolor sit amet, consectetur acinglit sed do eiusmod tempor inciidunt ut labore
 												</p>
@@ -1485,10 +1497,10 @@
 										</li>
 										<li>
 											<div class="latest-news-image">
-												<a href="single-blog.html"><img src="images/blog/2.jpg" alt=""></a>
+												<a href="single-blog.php"><img src="images/blog/2.jpg" alt=""></a>
 											</div>
 											<div class="latest-news-info">
-												<h6><a href="single-blog.html">Beautiful Home</a></h6>
+												<h6><a href="single-blog.php">Beautiful Home</a></h6>
 												<p>
 													Lorem ipsum dolor sit amet, consectetur acinglit sed do eiusmod tempor inciidunt ut labore
 												</p>
@@ -1496,10 +1508,10 @@
 										</li>
 										<li>
 											<div class="latest-news-image">
-												<a href="single-blog.html"><img src="images/blog/3.jpg" alt=""></a>
+												<a href="single-blog.php"><img src="images/blog/3.jpg" alt=""></a>
 											</div>
 											<div class="latest-news-info">
-												<h6><a href="single-blog.html">Beautiful Home</a></h6>
+												<h6><a href="single-blog.php">Beautiful Home</a></h6>
 												<p>
 													Lorem ipsum dolor sit amet, consectetur acinglit sed do eiusmod tempor inciidunt ut labore
 												</p>
@@ -1566,9 +1578,10 @@
 		<script src="js/main.js"></script>
 	<!-- sweetalert -->
 		<script type="text/javascript" src="https://unpkg.com/sweetalert2@7.11.0/dist/sweetalert2.all.js"></script>
-
+	
 	<!-- System -->
 		<script src="js_system/estates.js"></script>
+		<script src="js_system/blog.js"></script>
 
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsZOvqzL9c7_O7Fj7t3FDt77nejjwbZXw&libraries=places,geometry" async defer></script>
 		<script>
