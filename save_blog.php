@@ -1,4 +1,5 @@
 <?php 
+	$date = $resp['date'] = date('Y-m-d H:i:s');
 	$dir_subida = 'blog_data/';
 	$image = $dir_subida . date('Y-m-d--H-i-s').basename($_FILES['image']['name']);
 	move_uploaded_file($_FILES['image']['tmp_name'], $image);
@@ -11,8 +12,9 @@
 		new mysqli("localhost", "tc000457_inmo", "PEla06rapo", "tc000457_inmo");
 	
 	$sql = "INSERT INTO
-				blog(title, cat_id, description, image)
-			VALUES('".$_POST['title']."', '".$_POST['cat_id']."', '".$_POST['description']."', '".$image."')";
+				blog(title, cat_id, description, image, date)
+			VALUES('".$_POST['title']."', '".$_POST['cat_id']."', '".$_POST['description']."', '".$image."', 
+					'".$date."')";
 	$resp = mysqli_query($conexion, $sql);
 	
 	if (!$resp) {
