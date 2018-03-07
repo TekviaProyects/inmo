@@ -60,12 +60,13 @@
 				<div class="blog-image">
 					<a href="#">
 						<img 
+							height="300px"
 							src="<?php echo $value['image'] ?>" 
 							onerror="this.onerror=null;this.src='images/error.jpg';"
 							alt="">
 					</a>
 				</div>
-				<div class="blog-info">
+				<div class="blog-info" style="height: 250px">
 					<div class="post-title-time">
 						<h5>
 							<a href="#">

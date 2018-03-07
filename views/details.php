@@ -3,20 +3,6 @@
 		background: rgba(0, 0, 0, 0) url('<?php echo $_REQUEST['image'] ?>') no-repeat scroll 0 0 /cover;
 	}
 </style>
-
-<!-- BREADCRUMBS AREA START -->
-<div class="breadcrumbs-area bread-bg-per bg-opacity-black-70">
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12">
-				<div class="breadcrumbs">
-					<h2 class="breadcrumbs-title">Detalles</h2>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- BREADCRUMBS AREA END -->
 <!-- Start page content -->
 <section id="page-content" class="page-wrapper">
 	<div class="about-sheltek-area ptb-115">

@@ -41,9 +41,11 @@ var estates = {
 		"use strict";
 		console.log('==========> $objet list_estates', $objet);
 		
+		var view = (!$objet.view) ? 'list_estates' : $objet.view;
+		
 		$.ajax({
 			data : $objet,
-			url : 'views/list_estates.php',
+			url : 'views/'+view+'.php',
 			type : 'post',
 			dataType : 'html'
 		}).done(function(resp) {
